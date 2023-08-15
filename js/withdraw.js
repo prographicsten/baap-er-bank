@@ -21,16 +21,14 @@ document.getElementById('btn_withdraw').addEventListener('click', function () {
 
     // step 4
     const currentWithdrawTotal = previousWithdrawAmount + newWithdrawAmount;
-
-    // step 5
     previousWithdrawField.innerText = currentWithdrawTotal;
 
-    // step 6
+    // step 5
     const balanceTotalElement = document.getElementById('balance_total');
     const previousBalanceTotalString = balanceTotalElement.innerText;
     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
 
-    // step 7
+    // step 6
     const presentBalanceTotalAmount = previousBalanceTotal - newWithdrawAmount;
     balanceTotalElement.innerText = presentBalanceTotalAmount;
 
