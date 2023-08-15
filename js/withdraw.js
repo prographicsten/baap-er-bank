@@ -19,19 +19,24 @@ document.getElementById('btn_withdraw').addEventListener('click', function () {
     const previousWithdrawAmountString = previousWithdrawField.innerText;
     const previousWithdrawAmount = parseFloat(previousWithdrawAmountString);
 
-    // step 4
-    const currentWithdrawTotal = previousWithdrawAmount + newWithdrawAmount;
-    previousWithdrawField.innerText = currentWithdrawTotal;
-
     // step 5
     const balanceTotalElement = document.getElementById('balance_total');
     const previousBalanceTotalString = balanceTotalElement.innerText;
     const previousBalanceTotal = parseFloat(previousBalanceTotalString);
 
+    // step 8
+    withdrawField.value = '';
+
+    if (newWithdrawAmount > previousBalanceTotal) {
+        alert('Your Baap er Bank is enough money to withdraw');
+        return;
+    }
+
     // step 6
     const presentBalanceTotalAmount = previousBalanceTotal - newWithdrawAmount;
     balanceTotalElement.innerText = presentBalanceTotalAmount;
 
-    // step 8
-    withdrawField.value = '';
+    // step 4
+    const currentWithdrawTotal = previousWithdrawAmount + newWithdrawAmount;
+    previousWithdrawField.innerText = currentWithdrawTotal;
 });
