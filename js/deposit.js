@@ -10,4 +10,7 @@ document.getElementById('btn_deposit').addEventListener('click', function () {
     const depositTotalElement = document.getElementById('deposit_total');
     const depositTotal = depositTotalElement.innerText;
     depositTotalElement.innerText = depositAmount;
+
+    // step 7: clear the deposit field
+    depositField.value = '';
 });
