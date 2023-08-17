@@ -21,4 +21,4 @@ document.getElementById('btn_submit').addEventListener('click', function() {
     else {
         alert('invalid information');
     }
-});passwordField
+});
